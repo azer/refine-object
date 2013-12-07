@@ -1,0 +1,22 @@
+{
+  "name": "refine-object",
+  "version": "0.0.0",
+  "description": "Create a new object from given another one",
+  "main": "index.js",
+  "scripts": {
+    "test": "prova"
+  },
+  "devDependencies": {
+    "prova": "*"
+  },
+  "keywords": [
+    "refine",
+    "object"
+  ],
+  "repository": {
+    "url": "git@github.com:azer\/refine-object.git",
+    "type": "git"
+  },
+  "author": "Azer Koculu",
+  "license": "BSD"
+}
