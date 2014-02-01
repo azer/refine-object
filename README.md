@@ -35,6 +35,6 @@ original = {
   }
 }
 
-refine({ food: 'delicious.food[0]', fruit: 'delicious.fruits[0]' })
+refine({ food: 'delicious.food[0]', fruit: 'delicious.fruits[0]' })(original)
 // => { food: 'hamsi', fruit: 'orange' }
 ```
