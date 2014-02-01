@@ -14,9 +14,12 @@
     "object"
   ],
   "repository": {
-    "url": "git@github.com:azer\/refine-object.git",
+    "url": "git@github.com:azer/refine-object.git",
     "type": "git"
   },
   "author": "Azer Koculu",
-  "license": "BSD"
+  "license": "BSD",
+  "dependencies": {
+    "get-object-path": "0.x"
+  }
 }

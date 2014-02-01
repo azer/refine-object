@@ -12,3 +12,20 @@ it('returns a new function that creates objects from given others', function(){
   expect(firstTwo.first).to.equal(123);
   expect(firstTwo.second).to.equal(456);
 });
+
+it('can parse object paths', function(){
+  var foobar = refine({
+    foo: 'such.perform.so.scale',
+    bar: 'delicious eggs :)[0]',
+    qux: 'delicious eggs :)[1]'
+  });
+
+  var result = foobar({
+    such: { perform: { so: { scale: 'leveldb' } } },
+    'delicious eggs :)': ['white egg', 'brown egg']
+  });
+
+  expect(result.foo).to.equal('leveldb');
+  expect(result.bar).to.equal('white egg');
+  expect(result.qux).to.equal('brown egg');
+});

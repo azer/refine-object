@@ -1,3 +1,5 @@
+var get = require("get-object-path");
+
 module.exports = refine;
 
 function refine (model) {
@@ -6,7 +8,7 @@ function refine (model) {
     var result = {};
 
     for (key in model) {
-      result[key] = source[model[key]];
+      result[key] = get(source, model[key]);
     }
 
     return result;
