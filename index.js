@@ -1,16 +1,26 @@
 var get = require("get-object-path");
 
-module.exports = refine;
+module.exports = withModel;
+module.exports.refine = refine;
 
-function refine (model) {
+function withModel (model) {
   return function (source) {
-    var key;
-    var result = {};
+    return refine(model, source);
+  };
+}
 
-    for (key in model) {
+function refine (model, source) {
+  var key;
+  var result = {};
+
+  for (key in model) {
+    if (typeof model[key] != 'object') {
       result[key] = get(source, model[key]);
+      continue;
     }
 
-    return result;
+    result[key] = refine(model[key], source);
   };
+
+  return result;
 }
