@@ -1,6 +1,6 @@
 {
   "name": "refine-object",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Create a new object from given another one",
   "main": "index.js",
   "scripts": {
